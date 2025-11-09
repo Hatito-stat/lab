@@ -159,3 +159,29 @@ footer {
     font-size: 12px;
     color: var(--muted);
 }
+
+/* Ховаємо посилання на поточну сторінку в меню */
+
+.page-index .nav-links a[href="index.html"] {
+    display: none;
+}
+
+.page-list .nav-links a[href="list.html"] {
+    display: none;
+}
+
+.page-son .nav-links a[href="son-trava.html"] {
+    display: none;
+}
+
+.page-podsnihnyk .nav-links a[href="podsnihnyk.html"] {
+    display: none;
+}
+
+.page-gallery .nav-links a[href="gallery.html"] {
+    display: none;
+}
+
+.page-protection .nav-links a[href="protection.html"] {
+    display: none;
+}
