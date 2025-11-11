@@ -1,60 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="utf-8">
-  <title>Лабораторні роботи — Головна</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    :root { --bg:#0b0b0d; --card:#15151a; --txt:#e8e8ef; --muted:#a0a0b5; --accent:#7dd3fc; }
-    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu;
-      background:var(--bg);color:var(--txt)}
-    header{padding:28px 20px;border-bottom:1px solid #24242c}
-    .wrap{max-width:900px;margin:0 auto;padding:24px 20px}
-    h1{margin:0 0 6px;font-size:28px}
-    p.sub{margin:0;color:var(--muted)}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-top:22px}
-    .card{background:var(--card);border:1px solid #24242c;border-radius:16px;padding:18px;text-decoration:none;color:inherit;transition:transform .12s ease, border-color .12s ease}
-    .card:hover{transform:translateY(-2px);border-color:#2f2f3a}
-    .tag{display:inline-block;font-size:12px;padding:2px 8px;border-radius:999px;background:#1d1d25;color:var(--muted);margin-bottom:8px}
-    .title{font-size:18px;margin:2px 0 6px}
-    .desc{font-size:14px;color:var(--muted);margin:0}
-    footer{border-top:1px solid #24242c;margin-top:20px}
-    .note{font-size:13px;color:var(--muted);padding:16px 0}
-  </style>
+    <meta charset="UTF-8">
+    <title>Квіти Червоної книги України</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
-    <div class="wrap">
-      <h1>Лабораторні роботи</h1>
-      <p class="sub">Головна сторінка зі списком робіт та швидкими переходами.</p>
+<body class="page-index">
+
+
+<nav class="header">
+    <div class="header-inner">
+        <div class="logo">
+            🌸 <span>Red Book Flowers</span>
+        </div>
+        <div class="nav-links">
+            <a href="/lab1/">Головна</a>
+            <a href="/lab1/list/">Перелік</a>
+            <a href="/lab1/son-trava/">Сон-трава</a>
+            <a href="/lab1/podsnihnyk/">Підсніжник</a>
+            <a href="/lab1/gallery/">Галерея</a>
+            <a href="/lab1/protection/">Охорона</a>
+            <a href="../"> ← До списку лабораторних</a>
+
+        </div>
     </div>
-  </header>
+</nav>
 
-  <main class="wrap">
-    <section class="grid">
-      <a class="card" href="lab1/">
-        <span class="tag">№1</span>
-        <h2 class="title">Квіти Червоної книги України</h2>
-        <p class="desc">Невеликий навчальний сайт із переліком квітів, галереєю та сторінкою про охорону.</p>
-      </a>
+<main class="container">
+    <section class="card">
+        <h1>Квіти Червоної книги України</h1>
+        <p class="subtitle">
+            Невеликий навчальний сайт про рідкісні квіти, створений у межах лабораторної роботи.
+        </p>
 
-      <!-- Приклад заготовок для наступних робіт -->
-      <a class="card" href="lab2/">
-        <span class="tag">№2</span>
-        <h2 class="title">Лабораторна 2</h2>
-        <p class="desc">Опис коротко (з’явиться пізніше).</p>
-      </a>
+        <p>
+            <strong>Червона книга України</strong> – це офіційний документ, де зібрані відомості
+            про рідкісні та зникаючі види рослин і тварин. На цьому сайті ми познайомимося з
+            кількома представниками квітів, занесених до Червоної книги, та дізнаємося, чому
+            їх потрібно охороняти.
+        </p>
 
-      <a class="card" href="lab3/">
-        <span class="tag">№3</span>
-        <h2 class="title">Лабораторна 3</h2>
-        <p class="desc">Опис коротко (з’явиться пізніше).</p>
-      </a>
+        <h2>Що є на цьому сайті</h2>
+        <ul>
+            <li><strong>Перелік квітів</strong> із короткими характеристиками.</li>
+            <li><strong>Окремі сторінки</strong> для сон-трави та підсніжника звичайного.</li>
+            <li><strong>Фотогалерея</strong> з прикладами зовнішнього вигляду рослин.</li>
+            <li><strong>Сторінка про охорону</strong> рідкісних видів і поради, що може зробити кожен.</li>
+        </ul>
+
+        <img src="img/red-book-cover.jpg" alt="Червона книга України" class="img-center">
+
+       
     </section>
+</main>
 
-    <footer>
-      <div class="note">Порада: щоб адреси були без <code>.html</code>, зберігайте кожну роботу у власній папці з файлом <code>index.html</code> всередині — як у прикладі.</div>
-    </footer>
-  </main>
+<footer>
+    Сайт з квітами Червоної книги України
+</footer>
+
 </body>
 </html>
