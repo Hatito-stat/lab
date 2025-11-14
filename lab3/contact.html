@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота 3 – Форма зворотного зв'язку</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-index">
+
+<nav class="header">
+  <div class="header-inner">
+       <div class="logo">
+          🌸 <span><a href="../">Laboratory Work</a></span>
+       </div>
+      <div class="nav-links">
+          <a href="index.html">Головна</a> 
+          <a href="contact.html">Форма зворотного зв'язку</a> 
+          
+        </div>
+    </div>
+</nav>
+
+<header>
+    <h1>Лабораторна робота №3</h1>
+    <p>Форма зворотного зв'язку для студентів</p>
+    <button type="button" class="theme-toggle" id="theme-toggle">Світла тема</button>
+</header>
+
+<main>
+    <section>
+        <p class="hint">
+            У формі використані різні типи полів, елементи <code>radio</code>, 
+            випадаючий список та атрибут <code>required</code> для базової валідації.
+        </p>
+
+        <form action="#" method="post">
+            <div class="form-row">
+                <label for="fullname">ПІБ студента <span class="required">*</span></label>
+                <input type="text" id="fullname" name="fullname" required
+                       placeholder="Прізвище Ім'я По батькові">
+            </div>
+
+            <div class="form-row">
+                <label for="email">E-mail для відповіді <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required
+                       placeholder="name@example.com">
+                <span class="hint">
+                    Поле має тип <code>email</code>, тому браузер перевіряє коректність адреси.
+                </span>
+            </div>
+
+            <div class="form-row">
+                <label for="group">Курс / група <span class="required">*</span></label>
+                <select id="group" name="group" required>
+                    <option value="">— Оберіть групу —</option>
+                    <option value="M1-B22">M1-В22</option>
+                    <option value="M1-B21">M1-В23</option>
+                    <option value="M1-B21">M1-В24</option>
+                    <option value="M1-B21">M1-В25</option>
+                    <option value="M1-B22">F1-В22</option>
+                    <option value="M1-B21">F1-В23</option>
+                    <option value="M1-B21">F1-В24</option>
+                    <option value="M1-B21">F1-В25</option>
+                    <option value="M1-B21">KN1-В22</option>
+                    <option value="M1-B21">KN1-В23</option>
+                    <option value="M1-B21">KN1-В24</option>
+                    <option value="M1-B21">KN1-В25</option>
+                    <option value="Інша">Інша група</option>
+                </select>
+            </div>
+
+            <div class="form-row radio-group">
+                <span>Тема звернення <span class="required">*</span></span>
+                <div class="radio-options">
+                    <label>
+                        <input type="radio" name="topic" value="consultation" required>
+                        Консультація з дисципліни
+                    </label>
+                    <label>
+                        <input type="radio" name="topic" value="task">
+                        Питання по лабораторній / практичній роботі
+                    </label>
+                    <label>
+                        <input type="radio" name="topic" value="site">
+                        Пропозиції щодо структури або дизайну сайту
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="message">Текст звернення <span class="required">*</span></label>
+                <textarea id="message" name="message" required
+                          placeholder="Опишіть своє питання або пропозицію"></textarea>
+            </div>
+
+            <div class="form-row">
+                <label for="preferred-time">Бажаний час відповіді (необов’язково)</label>
+                <input type="text" id="preferred-time" name="preferred-time"
+                       placeholder="Напр.: у будні після 18:00">
+            </div>
+
+            <button type="submit">Надіслати звернення</button>
+        </form>
+
+        <p class="center">
+            <a href="index.html" class="btn-link">Повернутися до розкладу</a>
+        </p>
+    </section>
+</main>
+
+<script src="theme.js"></script>
+</body>
+</html>
