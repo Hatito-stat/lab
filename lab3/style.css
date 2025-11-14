@@ -191,7 +191,7 @@ table {
 th, td {
     border: 1px solid var(--border);
     padding: 8px 10px;
-    text-align: left;
+    text-align: left;      /* сторона для всіх */
 }
 
 /* Заголовок таблиці – темна тема (за замовчуванням) */
