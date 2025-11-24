@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="uk" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота 5 – Фірмовий стиль (Canva)</title>
+
+    <!-- Google Fonts для Playfair Display та Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ <nav class="header">
+    <div class="header-inner">
+        <div class="logo">
+            🌸 <span><a href="../">Laboratory Work</a></span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Головна</a>
+        </div>
+    </div>
+</nav>
+
+<header>
+    <h1>Лабораторна робота №5</h1>
+    <p>Розробка фірмового стилю: логотип, банер та інтерактивні кнопки (Canva)</p>
+    <button type="button" class="theme-toggle" id="theme-toggle">Світла тема</button>
+</header>
+
+<main>
+
+    <section class="card center">
+        <h2>Банер курсу</h2>
+        <img class="img-center"
+             src="img/banner-course.png"
+             alt="Банер курсу з веб-програмування / методики навчання інформатики">
+   
+    </section>
+    
+
+    <section class="card">
+        <h2>Логотипи освітнього сайту</h2>
+
+        <div class="gallery-grid">
+            <figure class="gallery-item">
+                <img src="img/logo-main.png"
+                     alt="Основний логотип сайту «Методика навчання інформатики»">
+                <figcaption>
+                    Основний логотип (PNG, прозорий фон) для шапки сайту та друкованих матеріалів.
+                </figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="img/logo-icon.png"
+                     alt="Іконка логотипу без тексту">
+                <figcaption>
+                    Іконка без тексту — можна використовувати як favicon або аватарку.
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Інтерактивні кнопки навігації</h2>
+        <p>
+            Кнопки створені в Canva в єдиному стилі й використовуються для переходу до основних
+            розділів освітнього ресурсу.
+        </p>
+
+        <div class="gallery-grid">
+            <a href="#homework">
+                 <img src="img/btn-homework.png"
+                     alt="Кнопка «Домашні завдання»">
+            </a>
+        
+            <a href="#literature">
+                <img src="img/btn-literature.png"
+                     alt="Кнопка «Література»">
+            </a>
+
+             <a href="#contacts">
+                <img src="img/btn-contacts.png"
+                     alt="Кнопка «Контакти»">
+             </a>
+        </div>
+    </section>
+
+    <section class="card" id="homework">
+        <h2>Домашні завдання</h2>
+        <p>
+            555505755585555
+        </p>
+    </section>
+
+    <section class="card" id="literature">
+        <h2>Рекомендована література</h2>
+        <ul>
+            <li>Підручники з інформатики (7–11 класи).</li>
+            <li>Методичні посібники з веб-програмування.</li>
+            <li>Онлайн-ресурси (офіційна документація HTML/CSS).</li>
+        </ul>
+    </section>
+
+    <section class="card" id="contacts">
+        <h2>Контактна інформація</h2>
+        <p>
+            Iнформації: e-mail
+        </p>
+    </section>
+</main>
+
+<footer>
+    lab5
+</footer>
+
+<script src="theme.js"></script>
+</body>
+</html>

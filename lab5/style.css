@@ -1,0 +1,540 @@
+:root {
+    /* запасні значення (темна тема) */
+    --bg: #0d1117;
+    --header-bg: #010409;
+    --header-text: #f0f6fc;
+    --link: #58a6ff;
+    --link-hover: #79c0ff;
+    --border: #30363d;
+    --card-bg: #161b22;
+    --text: #e6edf3;
+    --muted: #8b949e;
+}
+
+/* Явно темна тема */
+:root[data-theme="dark"] {
+    --bg: #0d1117;
+    --header-bg: #010409;
+    --header-text: #f0f6fc;
+    --link: #58a6ff;
+    --link-hover: #79c0ff;
+    --border: #30363d;
+    --card-bg: #161b22;
+    --text: #e6edf3;
+    --muted: #8b949e;
+}
+
+/* Світла тема */
+:root[data-theme="light"] {
+    --bg: #f5f5f7;
+    --header-bg: #ffffff;
+    --header-text: #111827;
+    --link: #2563eb;
+    --link-hover: #1d4ed8;
+    --border: #d1d5db;
+    --card-bg: #ffffff;
+    --text: #111827;
+    --muted: #6b7280;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* Заголовки – окремий шрифт з Google Fonts */
+h1, h2, h3 {
+    font-family: "Playfair Display", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    letter-spacing: 0.01em;
+}
+
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+/* Шапка */
+
+.header {
+    background: var(--header-bg);
+    color: var(--header-text);
+    border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--header-text);
+}
+
+.logo a {
+    color: var(--header-text);
+}
+
+.logo span {
+    font-weight: 700;
+}
+
+.nav-links a {
+    font-size: 14px;
+    margin-left: 12px;
+    color: var(--header-text);
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Для лабораторних сторінок: звичайний <header> */
+
+header {
+    background: var(--header-bg);
+    color: var(--header-text);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+    padding: 16px;
+}
+
+header h1 {
+    margin: 0 0 4px;
+}
+
+header p {
+    margin: 0;
+    color: var(--muted);
+}
+
+/* Контент */
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+/* main у лабораторних поводиться як container */
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+/* Карточки / секції */
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-top: 16px;
+    box-shadow: 0 0 0 1px rgba(1,4,9,0.1);
+}
+
+section {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-top: 16px;
+    box-shadow: 0 0 0 1px rgba(1,4,9,0.1);
+}
+
+.card h1,
+.card h2,
+.card h3,
+section h1,
+section h2,
+section h3 {
+    margin-top: 0;
+}
+
+.subtitle {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+/* Списки */
+
+ul, ol {
+    padding-left: 20px;
+}
+
+/* Таблиця  */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+}
+
+/* Заголовок таблиці – темна тема (за замовчуванням) */
+th {
+    background: #161b22;
+    color: var(--muted);
+    font-weight: 600;
+}
+
+/* Заголовок таблиці – світла тема (виправлений селектор) */
+html[data-theme="light"] th {
+    background: #e5e7eb;   /* світло-сірий фон */
+    color: #111827;        /* темний текст */
+}
+
+caption {
+    caption-side: top;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--muted);
+}
+
+/* Додаткові стилі для розкладу (ЛР3, на всяк випадок) */
+
+.schedule-wrapper {
+    overflow-x: auto;
+}
+
+.day-column {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.time-column {
+    white-space: nowrap;
+}
+
+/* Зображення */
+
+img {
+    max-width: 100%;
+    border-radius: 4px;
+    display: block;
+}
+
+.img-center {
+    margin: 12px auto;
+    max-width: 360px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.gallery-item {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px;
+    background: #0d1117;
+    text-align: center;
+    font-size: 14px;
+    border: center;  
+}
+
+/* Заголовок таблиці – світла тема (виправлений селектор) */
+html[data-theme="light"] .gallery-item {
+    background: #e5e7eb;   /* світло-сірий фон */
+    color: #111827;        /* темний текст */
+}
+/* Низ */
+
+footer {
+    margin: 32px 0 16px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+/* Центрування та кнопка-посилання */
+
+.center {
+    text-align: center;
+}
+
+.btn-link {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    background: var(--link);
+    color: var(--header-text);
+    font-weight: 600;
+}
+
+.btn-link:hover {
+    background: var(--link-hover);
+}
+
+/* Форма зворотного зв'язку (як у ЛР3, на випадок використання) */
+
+form {
+    display: grid;
+    gap: 16px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    font-weight: 500;
+}
+
+.required {
+    color: #f85149;
+}
+
+.hint {
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    font: inherit;
+    box-sizing: border-box;
+    background: #010409;
+    color: var(--text);
+}
+
+/* Світла тема: інший фон полів форми */
+html[data-theme="light"] input[type="text"],
+html[data-theme="light"] input[type="email"],
+html[data-theme="light"] select,
+html[data-theme="light"] textarea {
+    background: #ffffff;
+    color: #111827;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--link);
+    box-shadow: 0 0 0 1px var(--link);
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.radio-group,
+.radio-options {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.radio-options label {
+    font-weight: 400;
+}
+
+button[type="submit"] {
+    padding: 10px 18px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    background: var(--link);
+    color: var(--header-text);
+    font-weight: 600;
+    cursor: pointer;
+    justify-self: flex-start;
+}
+
+button[type="submit"]:hover {
+    background: var(--link-hover);
+}
+
+/* Кнопка перемикання теми */
+
+.theme-toggle {
+    margin-top: 8px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--header-text);
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Лабораторна 4 */
+
+.article-layout {
+    line-height: 1.7;
+    font-size: 15px;
+    text-align: justify;
+}
+
+.layout-two-columns {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    margin-top: 16px;
+}
+
+.main-article {
+    flex: 2;
+}
+
+.main-article p {
+    margin-bottom: 10px;
+}
+
+.main-article h3 {
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+/* Сайдбар */
+
+.sidebar {
+    flex: 1 1 260px;
+    max-width: 300px;
+    position: sticky;
+    top: 56px; /* приблизна висота меню */
+}
+
+.sidebar-block {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px 14px;
+    box-shadow: 0 0 0 1px rgba(1,4,9,0.1);
+    font-size: 14px;
+}
+
+.sidebar-block + .sidebar-block {
+    margin-top: 12px;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin-bottom: 4px;
+}
+
+.sidebar li strong {
+    font-weight: 600;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+.tags li {
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: #161b22;
+    color: var(--text);
+}
+
+html[data-theme="light"] .tags li {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+/* Посилання в сайдбарі */
+
+.sidebar-links {
+    margin: 4px 0 0;
+    padding-left: 18px;
+}
+
+.sidebar-links li {
+    margin-bottom: 4px;
+}
+
+.sidebar a {
+    color: var(--link);
+    text-decoration: none;
+    border-bottom: 1px dashed transparent;
+}
+
+.sidebar a:hover {
+    border-color: var(--link-hover);
+}
+
+/* Адаптивність */
+
+@media (max-width: 768px) {
+    main {
+        padding: 12px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    .layout-two-columns {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        border-left: none;
+        border-top: 1px solid var(--border);
+        padding-left: 0;
+        padding-top: 16px;
+    }
+}
